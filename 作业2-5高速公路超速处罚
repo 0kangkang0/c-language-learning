@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main()
+{
+   float v,lv,l1,l2;
+   l1=lv*1.1,l2=lv*1.5;
+   scanf("%f %f",&v,&lv);
+   if(v<lv*1.1){
+       printf("OK");
+   }else if(lv*1.1<=v&&v<lv*1.5){
+       printf("Exceed %.0f%%. Ticket 200",(v/lv-1)*100);
+   }else{
+       printf("Exceed %.0f%%. License Revoked",(v/lv-1)*100);
+   }
+   return 0;
+}
