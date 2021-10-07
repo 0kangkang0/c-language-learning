@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main()
+{
+    int a,b,c,n,s;
+    scanf("%d",&n);
+    for(int i=1;i<=n;i++){
+        scanf("%d %d %d",&a,&b,&c);
+        if(a<=b&&b<=c){
+        s=a*b/2;
+        }else if(a<=c&&c<=b){
+        s=a*c/2;
+        }else if(b<=a&&a<=c){
+        s=a*b/2;
+        }else if(b<=c&&c<=a){
+        s=b*c/2;
+        }else if(c<=a&&a<=b){
+        s=a*c/2;
+        }else{
+        s=b*c/2;
+        }
+        printf("%d\n",s);
+    }
+    return 0;
+}
