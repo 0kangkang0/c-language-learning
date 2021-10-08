@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int num ;
+    scanf("%d",&num);
+    int x=0,y=0;
+    while(num!=0){
+        if((num%10)%2==0){
+            x++;
+        }else{
+            y++;
+        }
+        num/=10;
+    }
+    if(x==y){
+        printf("YES");
+    } else{
+        printf("NO");
+    }
+}
