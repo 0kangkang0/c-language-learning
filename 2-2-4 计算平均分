@@ -1,0 +1,10 @@
+#include <stdio.h>
+int main()
+{
+    int averag;
+    int m=87,e=72,c=93;
+    averag=(m+e+c)/3;
+    printf("math = 87, eng = 72, comp = 93, average = %d\n",averag);
+    return 0;
+    
+}
