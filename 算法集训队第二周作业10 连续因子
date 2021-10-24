@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include "math.h"
+int prime(int x){
+    if(x==1){
+        return 0;
+    } else{
+        for (int i = 2; i <= sqrt(x) ; ++i) {
+            if(x%i==0){
+                return 0;
+            }
+        }
+    }
+    return 1;
+}
+int main(){
+    long n;
+    int mcount=0,start;
+    scanf("%ld",&n);
+    if(prime(n)){
+        printf("1\n%ld",n);
+    } else{
+        for (int i = 2; i <= sqrt(n) ; ++i) {
+            int count=0;
+            int t=n;
+            int j=i;
+            while (t%j==0){
+                count++;
+                t/=j;
+                j++;
+            }
+            if(count>mcount){
+                mcount=count;
+                start=i;
+            }
+        }
+        if(mcount){
+            printf("%d\n",mcount);
+            for (int i = 0; i <mcount ; ++i) {
+                printf("%d",start+i);
+                if(i!=mcount-1){
+                    printf("*");
+                }
+            }
+        }
+    }
+    return 0;
+}
