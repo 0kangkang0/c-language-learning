@@ -1,0 +1,33 @@
+#include<stdio.h>
+int main()
+{
+    int n,sum,flag=0,q,right=1;
+    char ch;
+    scanf("%d",&q);
+    sum=q;
+    while(scanf("%c",&ch)&&ch!='='){
+        scanf("%d",&n);
+        if(ch=='+'){
+            sum+=n;
+        } else if(ch=='-'){
+            sum-=n;
+        } else if(ch=='*'){
+            sum*=n;
+        } else if(ch=='/'){
+            if(n==0){
+                printf("ERROR");
+                right=0;
+                break;
+            }
+            sum/=n;
+        } else{
+            printf("ERROR");
+            right=0;
+            break;
+        }
+    }
+    if(right){
+        printf("%d",sum);
+    }
+    return 0;
+}
