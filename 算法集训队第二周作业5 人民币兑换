@@ -1,0 +1,19 @@
+#include <stdio.h>
+int main(){
+    int n,count=0;
+    scanf("%d",&n);
+    for (int i = 1; i <=100 ; ++i) {
+        for (int j = 1; j <=100 ; ++j) {
+            for (int k = 1; k <=100 ; ++k) {
+                if(5*i+2*j+k==150&&i+j+k==100){
+                    printf("%d %d %d\n",i,j,k);
+                    count++;
+                }
+            }
+        }
+        if(count==n){
+            break;
+        }
+    }
+    return 0;
+}
