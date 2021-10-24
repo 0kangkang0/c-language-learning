@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main(){
+    int n,u,d,sum=0,time=0;
+    scanf("%d %d %d",&n,&u,&d);
+    while(sum<n){
+        sum+=u;
+        time++;
+        if(sum<n){
+            sum-=d;
+            time++;
+        }
+    }
+    printf("%d",time);
+    return 0;
+}
